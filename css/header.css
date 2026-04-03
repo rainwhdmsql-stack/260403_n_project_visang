@@ -1,0 +1,84 @@
+.header{
+    width: 100%;
+    /* background-color: aqua; */
+}
+/* 상단메뉴 unb */
+.unb{
+    width: 100%;
+    border-bottom: 1px solid #eef2f3;;
+}
+.unb .inner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+}
+.unb nav ul{
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+}
+/* 상단 왼쪽 메뉴 */
+.unb-left ul li a{
+    position: relative;
+    padding-left: 12px;
+    color: #515b5e;
+}
+.unb-left ul li a::after{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 0;
+    transform: translate(50%);
+    border-left: 1px solid #e0e5e6;
+    width: 1px;
+    height: 9px;
+}
+/* 상단 왼쪽 메뉴 - 비상교재 */
+.unb-left ul li:first-child a{
+    color: #00b0e1;;
+    padding-left: 0;
+}
+.unb-left ul li:first-child a::after{
+    display: none;
+}
+/* 상단 오른쪽 메뉴 */
+.unb-right ul li a{
+    color: #758185;
+}
+/* 메인 메뉴 gnb */
+.gnb{
+    width: 100%;
+    height: 84px;
+    background-color: aqua;
+    border-bottom: 1px solid #eef2f3;;
+}
+.gnb .inner{
+    position: relative;
+    display: flex;
+    padding: 12px 20px;
+}
+.logo{
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+/* 로고 */
+.logo a{
+    width: 120px;
+    height: 40px;
+    background: url("../assets/images/logo-visang.svg") no-repeat center / contain;
+}
+/* 교재 + 드롭 다운 */
+.logo .logo-dropDown{
+    width: 64px;
+}
+.logo .logo-dropDown p{
+    line-height: 1.4;
+    padding-left:10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #00b0e1;
+}
+
+

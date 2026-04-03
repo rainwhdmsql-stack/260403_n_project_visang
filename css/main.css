@@ -1,0 +1,16 @@
+@import url("reset.css");
+@import url("font.css");
+@import url("header.css");
+.wrap {
+  width: 100%;
+  margin: auto;
+}
+.inner {
+  width: 100%;
+  max-width: 1320px;
+  min-width: 550px;
+  margin: 0 auto;
+}
+.sr-only {
+  display: none;
+}
