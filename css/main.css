@@ -1,6 +1,8 @@
 @import url("reset.css");
 @import url("font.css");
 @import url("header.css");
+@import url("contents.css");
+@import url("responsive.css");
 .wrap {
   width: 100%;
   margin: auto;
@@ -10,6 +12,7 @@
   max-width: 1320px;
   min-width: 550px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .sr-only {
   display: none;

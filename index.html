@@ -44,8 +44,18 @@
     <meta property="og:url" content="http://book.visang.com/main" />
 
     <meta property="og:site_name" content="비상교재" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- swiper -->
+    <script defer src="js/swiper.js"></script>
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="css/main.css" />
+
     <!-- 폰트어썸 CDN -->
     <link
       rel="stylesheet"
@@ -145,7 +155,105 @@
       </header>
       <!-- 사이트 맵 -->
       <!-- 메인 -->
-      <!-- 하단 -->
+      <main class="main">
+        <!-- 상단 프로모션 -->
+        <section class="promotion">
+          <div class="inner">
+            <!-- Swiper -->
+            <div class="swiper Pr-mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                  <img
+                    src="/assets/images/banner/01_key_visual_pc1280x480.png"
+                    alt="오투x궤도"
+                  />
+                </div>
+                <div class="swiper-slide slide2">
+                  <img
+                    src="/assets/images/banner/02_pc_banner.png"
+                    alt="오투초등과학6학년"
+                  />
+                </div>
+                <div class="swiper-slide slide3">
+                  <img
+                    src="assets/images/banner/03_pc_banner.png"
+                    alt="완자공부력"
+                  />
+                </div>
+                <div class="swiper-slide slide4">
+                  <img
+                    src="assets/images/banner/04_pc_banner.png"
+                    alt="열공할인쿠폰20%"
+                  />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <!-- 학습자료실 & 퀵메뉴 -->
+        <section class="main-section">
+          <div class="box-wrap">
+            <!-- 학습자료실 -->
+            <div class="box archive">
+              <!-- 텍스트 -->
+              <div class="archive-txt">
+                <h2 class="title">학습 자료실</h2>
+                <p>
+                  여러분의 학습 잠재력을 활짝 열어줄 <br />
+                  풍부한 자료들을 만나보세요!
+                </p>
+                <a href="#" class="txt-btn" aria-label="자료실 바로가기"
+                  >바로가기</a
+                >
+              </div>
+              <!-- link icon -->
+              <div class="link-icon">
+                <!-- icon-1 -->
+                <div class="link-item">
+                  <a href="#">
+                    <span class="icon"></span>
+                    정답·해설
+                  </a>
+                </div>
+                <!-- icon-2 -->
+                <div class="link-item">
+                  <a href="#">
+                    <span class="icon"></span>
+                    정오표
+                  </a>
+                </div>
+                <!-- icon-3 -->
+                <div class="link-item">
+                  <a href="#">
+                    <span class="icon"></span>
+                    듣기자료
+                  </a>
+                </div>
+                <!-- icon-4 -->
+                <div class="link-item">
+                  <a href="#">
+                    <span class="icon"></span>
+                    기타자료
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- 퀵메뉴 -->
+            <div class="box quick-menu-2">
+              <h2 class="title">고객 지원</h2>
+              <a href="#">찾아보는 FAQ</a>
+              <a href="#">1:1 문의</a>
+            </div>
+          </div>
+        </section>
+        <!-- 추천교재 -->
+        <!-- 후기 -->
+        <!-- 소식 -->
+        <!-- 외부사이트 링크 -->
+      </main>
     </div>
   </body>
 </html>

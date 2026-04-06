@@ -1,0 +1,22 @@
+@media (max-width: 1020px) {
+  .main-menu {
+    display: none;
+  }
+  .unb {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .slide1 img {
+    content: url("../assets/images/mo-banner/01_key_visual_mo_banner335x360.jpg");
+  }
+  .slide2 img {
+    content: url("../assets/images/mo-banner/02_mo_banner.jpg");
+  }
+  .slide3 img {
+    content: url("../assets/images/mo-banner/03_mo_banner_3.jpg");
+  }
+  .slide4 img {
+    content: url("../assets/images/mo-banner/04_mo_banner.jpg");
+  }
+}
