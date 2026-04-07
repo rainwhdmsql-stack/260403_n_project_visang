@@ -20,3 +20,40 @@
     content: url("../assets/images/mo-banner/04_mo_banner.jpg");
   }
 }
+
+@media (max-width: 1160px) {
+  .link-item .icon {
+    height: 6vw;
+    min-width: 59px;
+    min-height: 59px;
+  }
+}
+@media (max-width: 1165px) {
+  .box.archive {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1023px) {
+  .quickMenu2 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .quickMenu-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .box-wrap {
+    flex-direction: column;
+  }
+  .box.archive {
+    width: 100%;
+    padding: 40px;
+  }
+  .box.cs {
+    width: 100%;
+    margin: auto 0;
+    padding: 40px;
+  }
+}
