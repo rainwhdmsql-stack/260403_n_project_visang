@@ -16,7 +16,7 @@
   position: absolute;
   top: 50%;
   bottom: 50%;
-  transform: translate(0 , -60%);
+  transform: translate(0, -60%);
   width: 50px;
   height: 50px;
   border: 1px solid #ebecee;
@@ -24,14 +24,14 @@
   background-color: #ffffff;
 }
 .swiper-button-next svg,
-.swiper-button-prev svg{
+.swiper-button-prev svg {
   height: 11px;
-    object-fit: contain;
-    transform-origin: center;
-    /* width: 69%; */
-    width: 11px;
-    pointer-events: none;
-    color: #222;
+  object-fit: contain;
+  transform-origin: center;
+  /* width: 69%; */
+  width: 11px;
+  pointer-events: none;
+  color: #222;
 }
 .swiper-button-prev {
   left: 15% !important;
@@ -175,10 +175,10 @@
   font-size: 16px;
 }
 .quickMenu-item {
-  flex: 1;
-  min-width: 0;
+  min-width: 285px;
   position: relative;
   display: flex;
+  flex-direction: column;
   padding: 0 130px 0 0;
   border-radius: 24px;
   background-color: #f7f7f7;
@@ -201,6 +201,8 @@
 }
 /* 퀵메뉴 아이콘 */
 .quickMenu-item .img {
+  display: block;
+  margin: 0px auto;
   position: absolute;
   top: 50%;
   right: 0;
@@ -215,8 +217,165 @@
   display: block;
   padding: 10px 0 10px 32px;
   line-height: 130px;
-  font-weight: 500;
   white-space: nowrap;
   font-size: 20px;
   font-family: "paperlogy-5";
 }
+
+/* 추천 교재 */
+.main-section-3 {
+  position: relative;
+}
+.main-section .section-title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 20px 0;
+  padding: 0 20px;
+  line-height: 1.3;
+  font-size: 52px;
+  font-family: "paperlogy-2";
+}
+.select-box {
+  position: relative;
+  padding: 0 20px;
+}
+.select-box select {
+  display: none;
+}
+/* 모든 - 토글 메뉴 */
+.select-box .select-toggle {
+  position: relative;
+  width: 100%;
+  padding: 0px 40px 10px 4px; /* 위 아래 여백 */
+  border-bottom: 2px solid #00b0e1;
+  font-family: "paperlogy-4";
+  font-size: 52px;
+  color: #00b0e1;
+}
+.select-box .select-toggle::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  margin-top: -16px;
+  background: url("../assets/images/icon/bg-select-toggle.svg") no-repeat 50%
+    50% / cover;
+  transition: transform 0.2s linear;
+}
+/* 토글 세부 메뉴 */
+.select-menu {
+  display: none;
+}
+/* 토글 선택 시 세부 메뉴 보임 */
+.select-box:focus-within .select-menu {
+  display: block;
+}
+/*  */
+.select-box .select-menu-wrap {
+  position: absolute;
+  width: 130px;
+  overflow: hidden;
+  top: calc(100% + 10px);
+  z-index: 10000;
+}
+/* '모든' 상단 박스 */
+.select-box .select-menu {
+  width: 100%;
+  padding: 4px 0;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e5e6;
+  transition: all 0.3s ease-in;
+}
+.select-box.type2 .select-item {
+  text-align: center;
+  font-family: "paperlogy-4";
+}
+.select-box .select-item {
+  display: block;
+  width: 100%;
+  padding: 9px 20px;
+  text-align: left;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 28px;
+  color: #222222;
+}
+
+/* 교재 슬라이드 */
+.main-slide-wrap {
+  position: relative;
+  width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.main-slide-wrap .co-mySwiper2,
+.main-slide-wrap .co-mySwiper {
+  position: relative;
+  z-index: 1;
+}
+
+.main-slide-wrap .co-mySwiper2 {
+  position: relative;
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+.main-slide-wrap .co-mySwiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.main-slide-wrap .co-mySwiper {
+  margin-top: 270px;
+  width: 80%;
+}
+
+.main-slide-wrap .co-mySwiper .swiper-slide {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.main-slide-wrap .co-mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.main-slide-wrap .co-mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+}
+/* 슬라이드 버튼 */
+.main-slide-wrap .swiper-button-prev,
+.main-slide-wrap .swiper-button-next {
+  position: absolute;
+  top: 38%;
+  transform: translateY(70%);
+  z-index: 300;
+  width: 44px;
+  height: 44px;
+  pointer-events: auto;
+}
+
+.main-slide-wrap .swiper-button-prev {
+  left: 660px !important;
+}
+
+.main-slide-wrap .swiper-button-next {
+  right: 440px !important;
+}
+

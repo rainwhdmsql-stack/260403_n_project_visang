@@ -56,4 +56,20 @@
     margin: auto 0;
     padding: 40px;
   }
+  .main-section .section-title , .select-box .select-toggle{
+    font-size: 32px;
+  }
+  .main-section-3{
+    margin-top: 60px;
+  }
+}
+@media (min-width: 768px){
+  .main-section-3{
+    margin-top: 80px;
+  }
+  .select-box.type2 .select-menu{
+    padding: 12px 0;
+        border-radius: 16px;
+        border-color: #00b0e1
+  }
 }
