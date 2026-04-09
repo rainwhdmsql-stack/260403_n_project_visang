@@ -28,11 +28,13 @@
     min-height: 59px;
   }
 }
+
 @media (max-width: 1165px) {
   .box.archive {
     flex-wrap: wrap;
   }
 }
+
 @media (max-width: 1023px) {
   .quickMenu2 {
     flex-wrap: wrap;
@@ -43,6 +45,7 @@
     flex: 0 0 calc(50% - 10px);
   }
 }
+
 @media (max-width: 768px) {
   .box-wrap {
     flex-direction: column;
@@ -56,20 +59,232 @@
     margin: auto 0;
     padding: 40px;
   }
-  .main-section .section-title , .select-box .select-toggle{
+  .main-section .section-title,
+  .select-box .select-toggle {
     font-size: 32px;
   }
-  .main-section-3{
+  .main-section-3 {
     margin-top: 60px;
   }
 }
-@media (min-width: 768px){
-  .main-section-3{
+
+@media (min-width: 768px) {
+  .main-section-3 {
     margin-top: 80px;
   }
-  .select-box.type2 .select-menu{
+  .select-box.type2 .select-menu {
     padding: 12px 0;
-        border-radius: 16px;
-        border-color: #00b0e1
+    border-radius: 16px;
+    border-color: #00b0e1;
+  }
+}
+
+/* 1200 이하 */
+@media (max-width: 1200px) {
+  .main-slide-wrap {
+    gap: 20px;
+  }
+
+  .main-slide-wrap .co-mySwiper2 {
+    width: 30%;
+  }
+
+  .main-slide-wrap .book-info {
+    width: 30%;
+  }
+
+  .main-slide-wrap .book-desc li {
+    font-size: 1.1rem;
+  }
+
+  .main-slide-wrap .co-mySwiper {
+    width: 40%;
+    margin-top: 220px;
+  }
+
+  .main-slide-wrap .swiper-button-prev,
+  .main-slide-wrap .swiper-button-next {
+    top: clamp(15rem, 14vw, 17rem);
+    width: 40px;
+    height: 40px;
+  }
+
+  .main-slide-wrap .book-title {
+    max-width: 300px;
+    font-size: 2.4rem;
+  }
+
+  .main-slide-wrap .book-desc,
+  .main-slide-wrap .book-title {
+  }
+}
+
+/* 슬라이드 */
+/* 900 이하 */
+@media (max-width: 900px) {
+  .main-slide-wrap {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .main-slide-wrap .co-mySwiper2 {
+    width: 32%;
+  }
+
+  .main-slide-wrap .book-info {
+    width: calc(68% - 20px);
+    padding-top: 0;
+  }
+
+  .main-slide-wrap .book-title {
+    font-size: 2.5rem;
+  }
+
+  .main-slide-wrap .book-cate {
+    font-size: 1rem;
+  }
+
+  /* 과목별 아이콘*/
+  .book-cate.math-1::after {
+    background: url("../assets/images/main/01-symbol-math.svg") no-repeat
+      center / contain;
+    right: 28.5rem;
+  }
+  .book-cate.math-2::after {
+    background: url("../assets/images/main/01-symbol-math.svg") no-repeat
+      center / contain;
+    right: 28.5rem;
+  }
+  .book-cate.math-3::after {
+    background: url("../assets/images/main/01-symbol-math.svg") no-repeat
+      center / contain;
+    right: 28.5rem;
+  }
+
+  .book-cate.eng-1::after {
+    background: url("../assets/images/main/01-symbol-english.svg") no-repeat
+      center / contain;
+    right: 28.4rem;
+  }
+  .book-cate.eng-2::after {
+    background: url("../assets/images/main/01-symbol-english.svg") no-repeat
+      center / contain;
+    right: 27.5rem;
+  }
+
+  .book-cate.sci-1::after {
+    background: url("../assets/images/main/03-symbol-science.svg") no-repeat
+      center / contain;
+    right: 28.2rem;
+  }
+  .book-cate.sci-2::after {
+    background: url("../assets/images/main/03-symbol-science.svg") no-repeat
+      center / contain;
+    right: 28.2rem;
+  }
+
+  .main-slide-wrap .book-desc li {
+    font-size: 1.13rem;
+  }
+
+  .main-slide-wrap .co-mySwiper {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .main-slide-wrap .swiper-button-prev {
+    left: calc(50% - 450px + 660px) !important;
+  }
+
+  .main-slide-wrap .swiper-button-next {
+    right: calc(50% - 450px + 150px) !important;
+  }
+  .main-slide-wrap .swiper-button-prev,
+  .main-slide-wrap .swiper-button-next {
+    transform: translateY(8rem);
+  }
+}
+/* 768 이하 */
+@media (max-width: 0px) {
+  /* .main-slide-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 16px;
+  } */
+
+
+  
+  /* 순서 변경 */
+  /* .main-slide-wrap .co-mySwiper2 {
+    order: 1;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .main-slide-wrap .co-mySwiper {
+    order: 2;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .main-slide-wrap .book-info {
+    order: 3;
+    margin-top: 20px;
+    width: 100%;
+    
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .main-slide-wrap .book-cate {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .main-slide-wrap .book-title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+
+  .main-slide-wrap .book-desc {
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .main-slide-wrap .book-desc li {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding-left: 14px;
+  }
+
+  .main-slide-wrap .book-desc li::before {
+    left: 0;
+    top: 0;
+  }
+
+  .main-slide-wrap .co-mySwiper .swiper-slide img {
+    max-width: 90px;
+  } */
+
+  /* 버튼 위치 */
+  .main-slide-wrap .swiper-button-prev,
+  .main-slide-wrap .swiper-button-next {
+    top: 9rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .main-slide-wrap .swiper-button-prev {
+    left: 50% !important;
+    margin-left: -18px;
+  }
+
+  .main-slide-wrap .swiper-button-next {
+    left: 50% !important;
+    margin-left: 18px;
+    right: auto !important;
   }
 }

@@ -294,9 +294,11 @@
         </section>
         <!-- 추천교재 -->
         <section class="main-section main-section-3">
+          <!-- 인너 -->
+           <div class="inner">
           <h2 class="section-title">
             <span>비상이 추천하는</span>
-            <!-- 토글 상단 박스 -->
+            <!-- 토글 상단 박스 -->3
             <div class="select-box type2">
               <!-- 학년 선택 -->
               <select id="select-grade">
@@ -362,10 +364,8 @@
           </h2>
           <!-- 슬라이드 -->
           <div class="main-slide-wrap">
-            <!-- 슬라이드 버튼 -->
-            <div class="slide2 swiper-button-next"></div>
-            <div class="slide2 swiper-button-prev"></div>
-            <!-- Swiper -->
+            
+            <!-- 큰 슬라이드 -->
             <div
               style="
                 --swiper-navigation-color: #fff;
@@ -375,53 +375,88 @@
             >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-1.jpg" />
+                  <img
+                    src="assets/images/main/book-1.jpg"
+                    alt="완자 공부력 초등영어 영단어 6A"
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-2.jpg" />
+                  <img
+                    src="assets/images/main/book-2.jpg"
+                    alt="완자 공부력 초등수학 5A"
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-3.jpg" />
+                  <img
+                    src="assets/images/main/book-3.jpg"
+                    alt="완자 공부력 초등국어 4A"
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-4.jpg" />
+                  <img
+                    src="assets/images/main/book-4.jpg"
+                    alt="개념플러스유형 중학수학"
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-5.jpg" />
+                  <img
+                    src="assets/images/main/book-5.jpg"
+                    alt="중학 영어 기본서"
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-6.jpg" />
+                  <img
+                    src="assets/images/main/book-6.jpg"
+                    alt="개념루트 고등수학"
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-7.jpg" />
+                  <img
+                    src="assets/images/main/book-7.jpg"
+                    alt="고등 국어 개념 기본서"
+                  />
                 </div>
               </div>
             </div>
+
+            <!-- 설명 영역 -->
+            <div class="book-info">
+              <p class="book-cate" id="bookCate"></p>
+              <h2 class="book-title" id="bookTitle"></h2>
+              <ul class="book-desc" id="bookDesc"></ul>
+            </div>
+
+            <!-- 썸네일 슬라이드 -->
             <div thumbsSlider="" class="swiper co-mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-1.jpg" />
+                  <img src="assets/images/main/book-1.jpg" alt="썸네일 1" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-2.jpg" />
+                  <img src="assets/images/main/book-2.jpg" alt="썸네일 2" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-3.jpg" />
+                  <img src="assets/images/main/book-3.jpg" alt="썸네일 3" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-4.jpg" />
+                  <img src="assets/images/main/book-4.jpg" alt="썸네일 4" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-5.jpg" />
+                  <img src="assets/images/main/book-5.jpg" alt="썸네일 5" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-6.jpg" />
+                  <img src="assets/images/main/book-6.jpg" alt="썸네일 6" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/images/main/book-7.jpg" />
+                  <img src="assets/images/main/book-7.jpg" alt="썸네일 7" />
                 </div>
               </div>
             </div>
+
+            <!-- 버튼 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
           </div>
         </section>
 
