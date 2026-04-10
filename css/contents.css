@@ -10,13 +10,11 @@
   margin-right: auto;
   padding: 0 0 50px 0;
 }
-/* swiper */
+
+/* swiper 공통 버튼 (상+하단)*/
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  top: 50%;
-  bottom: 50%;
-  transform: translate(0, -60%);
   width: 50px;
   height: 50px;
   border: 1px solid #ebecee;
@@ -28,17 +26,42 @@
   height: 11px;
   object-fit: contain;
   transform-origin: center;
-  /* width: 69%; */
   width: 11px;
   pointer-events: none;
   color: #222;
 }
-.swiper-button-prev {
+
+/* 상단 슬라이드 버튼 */
+.Pr-mySwiper .swiper-button-prev {
+  top: 50%;
+  bottom: 50%;
+  transform: translate(0, -60%);
   left: 15% !important;
 }
-.swiper-button-next {
+
+.Pr-mySwiper .swiper-button-next {
+  top: 50%;
+  bottom: 50%;
+  transform: translate(0, -60%);
   right: 15% !important;
 }
+
+
+
+/* 하단 슬라이드 버튼 */
+.sWbtn .swiper-button-prev{
+right: 20% !important;
+}
+
+.sWbtn {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  /* background-color: red; */
+}
+
 /* 학습자료실 & 퀵 메뉴*/
 .main-section {
   width: 100%;
@@ -50,6 +73,7 @@
   flex-direction: row;
   gap: 20px;
 }
+
 /* 학습자료실, 퀵메뉴 공통 영역 */
 .box {
   margin: 0 auto;
@@ -63,7 +87,7 @@
 .box h2 {
   margin: 0 0 24px;
   font-family: "paperlogy-2";
-  font-size: 28px;
+  font-size: clamp(26px, 0.5vw, 28px);
 }
 /* 서브텍스트 공통*/
 .box p {
@@ -71,24 +95,31 @@
   color: #222;
   margin: 12px 0 0;
 }
+
 /* 학습자료실 */
 .box.archive {
-  width: 70%;
+  width: clamp(70%, 0.5vw, 75%);
+  padding-left: clamp(30px, 0.5vw, 40px);
+  padding-top: clamp(35px, 0.5vw, 40px);
+  padding-bottom: clamp(35px, 0.5vw, 40px);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 15px;
+  /* justify-content: space-between; */
 }
 .archive-txt {
-  width: 24%;
-  /* background-color: yellow; */
-  /* flex: 0 0 220px; */
+  width: clamp(24%, 0.5vw, 28%);
   max-width: 250px;
   min-width: 200px;
 }
+/* 고객지원 */
 .box.cs {
-  width: 30%;
+  width: clamp(30%, 0.5vw, 35%);
+  padding-left: clamp(30px, 0.5vw, 40px);
+  padding-top: clamp(35px, 0.5vw, 40px);
+  padding-bottom: clamp(35px, 0.5vw, 40px);
 }
-/* 학습자료실 바로가기 */
+
+/* 학습자료실 - 바로가기 */
 .txt-btn {
   width: 88px;
   margin: 28px 0 0;
@@ -97,19 +128,22 @@
     100% 50%;
   align-items: center;
 }
-/* 학습자료실 하단 link-icon */
+/* 학습자료실 - 아이콘 전체 영역 */
 .link-icon {
-  width: 75%;
+  width: clamp(58%, 0.5vw, 60%);
+  min-width: 100px;
   display: flex;
   gap: 12px;
   margin-top: 20px;
-  /* background-color: red; */
 }
+/* 학습 자료실 - 개별[아이콘 + 텍스트 영역] */
 .link-item {
-  flex: 0 0 calc(25% - 9px);
+  width: calc(100% / 4);
 }
 .link-item a {
   display: flex;
+  width: 100%;
+  /* background-color: red; */
   flex-direction: column;
   gap: 12px;
   align-items: center;
@@ -117,19 +151,24 @@
   padding: 16px;
   color: #222222;
 }
+.link-item span {
+  font-size: clamp(15px, 1.5vw, 18px);
+  white-space: nowrap;
+}
+
 /* 학습자료실 바로가기 icon 스타일 */
 .link-item .icon {
-  width: 100%;
-  max-width: 80px;
-  height: 80px;
+  width: 80px;
+  aspect-ratio: 1/1;
   display: block;
 
   border-radius: 50%;
   background-color: #f8f9fa;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%;
+  background-size: clamp(40%, 0.5vw, 50%);
 }
+
 .link-item:nth-child(1) .icon {
   background-image: url("../assets/images/icon/ico-materials-menu-1.png");
 }
@@ -175,11 +214,10 @@
   font-size: 16px;
 }
 .quickMenu-item {
-  /* min-width: 285px; */
   position: relative;
   display: flex;
+  width: clamp(270px, 0.5vw, 320px);
   flex-direction: column;
-  /* padding: 0 130px 0 0; */
   border-radius: 24px;
   background-color: #f7f7f7;
   word-break: keep-all;
@@ -207,8 +245,8 @@
   top: 50%;
   right: 0;
   margin-top: -65px;
-  width: 130px;
-  height: 130px;
+  width: clamp(130px, 0.5vw, 140px);
+  height: clamp(130px, 0.5vw, 140px);
   z-index: 1;
 }
 /* 퀵메뉴 텍스트 */
@@ -216,7 +254,7 @@
   all: unset;
   display: block;
   padding: 10px 0 10px 32px;
-  line-height: 130px;
+  line-height: clamp(100px, 0.5vw, 120px);
   white-space: nowrap;
   font-size: 20px;
   font-family: "paperlogy-5";
@@ -233,7 +271,7 @@
   margin: 0 0 20px 0;
   padding: 0 20px;
   line-height: 1.3;
-  font-size: 52px;
+  font-size: clamp(32px, 0.5vw, 52px);
   font-family: "paperlogy-2";
 }
 .select-box {
@@ -250,7 +288,7 @@
   padding: 0px 40px 10px 4px; /* 위 아래 여백 */
   border-bottom: 2px solid #00b0e1;
   font-family: "paperlogy-4";
-  font-size: 52px;
+  font-size: clamp(32px, 0.5vw, 52px);
   color: #00b0e1;
 }
 .select-box .select-toggle::before {
@@ -312,12 +350,13 @@
 /* 교재 슬라이드 */
 .main-slide-wrap {
   position: relative;
-  height: clamp(220px 15vw 505px);
+  /* height: clamp(500px, 0.5vw, 510px); */
   width: 100%;
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-top: 2rem;
+  margin-top: clamp(20px, 0.5vw, 25px);
+  /* background-color: rgb(255, 211, 211); */
 }
 
 /* 공통 */
@@ -327,29 +366,24 @@
   position: relative;
   z-index: 1;
 }
-.main-slide-wrap .co-mySwiper img{
+.main-slide-wrap .co-mySwiper img {
   width: 100%;
 }
 /* 큰 슬라이드 */
 .main-slide-wrap .co-mySwiper2 {
-  width: 28%;
-  flex-shrink: 0;
-  margin-bottom: 0;
+  width: 30%;
 }
-
 .main-slide-wrap .co-mySwiper2 .swiper-slide img {
   display: block;
   width: 100%;
-  /* max-width: 350px; */
   height: auto;
-  /* margin: 0 auto; */
 }
 
 /* 설명 영역 */
 .main-slide-wrap .book-info {
-  width: 30%;
+  width: calc(100% / 4);
   min-width: 0;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 20px;
 }
 /* 학년 / 과목 */
 .main-slide-wrap .book-cate {
@@ -393,48 +427,57 @@
   z-index: 9999;
 }
 /* 과목별 아이콘*/
-.book-cate.math-1::after {
-  background: url("../assets/images/main/01-symbol-math.svg") no-repeat center / contain;
+/* .book-cate.math-1::after {
+  background: url("../assets/images/main/01-symbol-math.svg") no-repeat center /
+    contain;
   right: 14rem;
 }
 .book-cate.math-2::after {
-  background: url("../assets/images/main/01-symbol-math.svg") no-repeat center / contain;
+  background: url("../assets/images/main/01-symbol-math.svg") no-repeat center /
+    contain;
   right: 14rem;
 }
 .book-cate.math-3::after {
-  background: url("../assets/images/main/01-symbol-math.svg") no-repeat center / contain;
+  background: url("../assets/images/main/01-symbol-math.svg") no-repeat center /
+    contain;
   right: 14rem;
 }
 
 .book-cate.eng-1::after {
-  background: url("../assets/images/main/01-symbol-english.svg") no-repeat center / contain;
+  background: url("../assets/images/main/01-symbol-english.svg") no-repeat
+    center / contain;
   right: 13.8rem;
 }
 .book-cate.eng-2::after {
-  background: url("../assets/images/main/01-symbol-english.svg") no-repeat center / contain;
+  background: url("../assets/images/main/01-symbol-english.svg") no-repeat
+    center / contain;
   right: 13.1rem;
-}
+} */
 
 .book-cate.sci-1::after {
-  background: url("../assets/images/main/03-symbol-science.svg") no-repeat center / contain;
+  background: url("../assets/images/main/03-symbol-science.svg") no-repeat
+    center / contain;
   right: 13.7rem;
 }
 .book-cate.sci-2::after {
-  background: url("../assets/images/main/03-symbol-science.svg") no-repeat center / contain;
+  background: url("../assets/images/main/03-symbol-science.svg") no-repeat
+    center / contain;
   right: 13.7rem;
 }
 
-
 /* info 타이틀 */
 .main-slide-wrap .book-title {
-  max-width: 300px;
+  /* max-width: 70%; */
   margin-bottom: 24px;
-  font-size: 3.6rem;
+  /* font-size: 2.5rem; */
+  font-size: clamp(18px , 3vw , 38px );
+
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.04em;
   color: #222;
-  word-break: keep-all;
+  /* word-break: keep-all; */
+
   font-family: "paperlogy-3";
 }
 /* info 하단 정보 ul*/
@@ -443,17 +486,20 @@
   display: flex;
   flex-direction: column;
   padding-left: 20px;
-  margin-top: 64px;
+  margin-top: 15%;
   max-width: 300px;
   gap: 10px;
 }
 /* info 하단 정보 li */
 .main-slide-wrap .book-desc li {
   position: relative;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: clamp(12px , 2vw , 18px );
   line-height: 1.45;
+
+
 }
-.main-slide-wrap .book-desc li:before{
+.main-slide-wrap .book-desc li:before {
   content: "#";
   position: absolute;
   top: 0;
@@ -462,7 +508,6 @@
   font-size: 1.3rem;
   color: #00b0e1;
 }
-
 
 /* 썸네일 슬라이드 */
 .main-slide-wrap .co-mySwiper {
@@ -483,30 +528,11 @@
 .main-slide-wrap .co-mySwiper .swiper-slide img {
   display: block;
   width: 100%;
-  /* max-width: 160px; */
   height: auto;
 }
 
 /* 슬라이드 버튼 */
-.main-slide-wrap .swiper-button-prev,
-.main-slide-wrap .swiper-button-next {
-  position: absolute;
-  top: clamp(16rem, 16vw, 20rem);
-  transform: translateY(0);
-  transform-origin: center;
-  z-index: 300;
-  width: 44px;
-  height: 44px;
-  pointer-events: auto;
-}
 
-.main-slide-wrap .swiper-button-prev {
-  left: calc(50% - 600px + 720px) !important;
-}
-
-.main-slide-wrap .swiper-button-next {
-  right: calc(50% - 600px + 380px) !important;
-}
 
 /* 버튼 아이콘 크기 */
 .main-slide-wrap .swiper-button-prev::after,

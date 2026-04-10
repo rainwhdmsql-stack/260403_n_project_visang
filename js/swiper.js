@@ -127,7 +127,7 @@ function updateBookInfo(index) {
 
 var swiper = new Swiper(".main-slide-wrap .co-mySwiper", {
   spaceBetween: 8,
-  slidesPerView:3.5,
+  slidesPerView:2.5,
   loop: true,
   freeMode: false,
   watchSlidesProgress: true,

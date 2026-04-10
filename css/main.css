@@ -5,14 +5,19 @@
 @import url("responsive.css");
 .wrap {
   width: 100%;
-  margin: auto;
+  min-width: 390px;
+}
+.main{
+  width: 100%;
+  margin: 0 auto;
 }
 .inner {
   width: 100%;
   max-width: 1320px;
-  min-width: 550px;
+  min-width: 390px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-left: clamp(18px, 0.5vw, 20px);
+  padding-right: clamp(18px, 0.5vw, 20px);
 }
 .sr-only {
   display: none;
