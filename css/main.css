@@ -3,6 +3,7 @@
 @import url("header.css");
 @import url("contents.css");
 @import url("responsive.css");
+@import url("footer.css");
 .wrap {
   width: 100%;
   min-width: 390px;
